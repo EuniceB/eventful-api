@@ -115,10 +115,18 @@ textarea.materialize-textarea:focus:not([readonly]) {
     }
 }
 
-.event-page header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.event-page{
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .event-buttons button{
+        display: block;
+        width: 128px;
+        margin-bottom: 10px
+    }
 }
 
 .main-title {

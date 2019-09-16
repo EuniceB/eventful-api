@@ -37,9 +37,14 @@ class EventPage extends Component {
             M.toast({ html: 'Please fill the phone number field', classes: "red" })
             return false;
         }
-        M.toast({ html: 'This is an intentional error being shown on the form submit :)', classes: "red" })
+        M.toast({ html: 'This is an intentional error being shown on the book event form submit :)', classes: "red" })
         name.value = ""
         phone.value = ""
+        return true;
+    }
+
+    deleteEvent = () => {
+        M.toast({ html: 'This is an intentional error being shown on the delete event form submit :)', classes: "red" })
         return true;
     }
 
@@ -52,7 +57,13 @@ class EventPage extends Component {
         let event = this.props.data.event
         return (<div className="event-page">
                     <a className="go-back-link" href="#" onClick={this.goBack}>&lt;&lt; Return</a>
-                    <header><h4>{event.title}</h4><button id="book-button" className="btn orange">Book now</button></header>
+                    <header>
+                        <h4>{event.title}</h4>
+                        <div class="event-buttons">
+                            <button id="book-button" className="btn orange">Book now</button>
+                            <button id="delete-button" className="btn red">Delete event</button>
+                        </div>
+                    </header>
                     <Carousel images={event.images}/>
                     {this.renderDescription()}
                     <ModalWithButton id="bookModal" title="Participate in this event" triggerId="book-button" onSuccess={this.bookEvent} mainActionName="Book">
@@ -60,6 +71,9 @@ class EventPage extends Component {
                             <input id="name" type="text" placeholder="Your name"></input>
                             <input id="tel" type="tel" placeholder="Your phone number"></input>
                         </form>
+                    </ModalWithButton>
+                    <ModalWithButton id="deleteModal" title="Delete this event" triggerId="delete-button" onSuccess={this.deleteEvent} mainActionName="Delete event">
+                        <p>Are you sure you want to delete this event?</p>
                     </ModalWithButton>
                 </div>);
     }
