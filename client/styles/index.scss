@@ -1,0 +1,156 @@
+$material-icons-font-path: '~material-icons/iconfont/';
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+@import '~material-icons/iconfont/material-icons.scss';
+
+$baseColor: #ff9800;
+$textColor: #212121;
+$secondaryTextColor: lighten($textColor, 30%);
+$cardColor: #eee;
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]),
+input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]),
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid $baseColor;
+    box-shadow: 0 1px 0 0 $baseColor
+}
+
+#search-form {
+    margin-top: 8%;
+    text-align: center;
+
+    input {
+        width: initial;
+        margin-right: 3%
+    }
+
+    .datepicker-date-display {
+        background-color: $baseColor
+    }
+
+    .datepicker-table {
+        td.is-today {
+            color: $baseColor;
+        }
+
+        td.is-selected {
+            background-color: $baseColor;
+        }
+    }
+
+    .datepicker-cancel,
+    .datepicker-clear,
+    .datepicker-today,
+    .datepicker-done {
+        color: $baseColor;
+    }
+}
+
+.card.small {
+    display: flex;
+    height: auto;
+    background-color: $cardColor;
+
+    .card-image+.card-content {
+        height: 100%;
+        max-height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 20px 0 20px;
+
+        .card-title {
+            margin: 0;
+        }
+    }
+
+    .card-content .location-name {
+        position: absolute;
+        bottom: 20px;
+        right: 25px;
+        color: $secondaryTextColor;
+    }
+
+    .card-image {
+        height: 100%;
+        max-height: 100%;
+        display: flex;
+        align-items: center;
+        max-width: 9%;
+        border-right: 1px solid darken($secondaryTextColor, 40%);
+
+        img {
+            background-size: cover;
+            height: auto;
+            width: auto;
+            max-height: 100%;
+            max-width: 100%;
+        }
+    }
+
+    .time {
+        color: $textColor
+    }
+}
+
+.modal {
+    width: 33%;
+    text-align: center;
+}
+
+.event-images {
+    text-align: center;
+
+    img {
+        cursor: pointer
+    }
+}
+
+.event-page header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-title {
+    font-family: 'Indie Flower', cursive;
+}
+
+h6 {
+    font-weight: bold
+}
+
+.category {
+    margin-top: 40px
+}
+
+.main-header {
+    background-color: $baseColor;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.loading {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.go-back-link{
+    display: inline-block;
+    margin: 20px 0;   
+}
+
+.main-header{
+    cursor: pointer
+}
