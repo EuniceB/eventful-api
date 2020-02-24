@@ -39,3 +39,7 @@ If you have any doubts, feel free to contact me at eunicebeijinho@gmail.com.
  - Pagination of the results
  - Authentication and different kinds of roles
  - Responsive design
+
+**UI Mockups**
+
+The mockups used for this simple UI are located in the "mockups" folder.
